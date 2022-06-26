@@ -23,7 +23,7 @@ shortTitle: Filtrar alertas
 
 ## Acerca de filtrar el resumen de seguridad
 
-Puedes utilizar filtros en el resumen de seguridad para reducir tu enfoque con base en una serie de factores, como el nivel de riesgo de la alerta, el tipo de esta y la habilitación de características. Los diversos filtros se encuentran disponibles dependiendo de la vista específica y de si estás analizando a nivel de organización, de equipo o de repositorio.
+Puedes utilizar filtros en el resumen de seguridad para reducir tu enfoque con base en una serie de factores, como el nivel de riesgo de la alerta, el tipo de esta y la habilitación de características. Different filters are available depending on the specific view and whether your analysis is at the organization, team or repository level.
 
 ## Filtrar por repositorio
 
@@ -101,7 +101,7 @@ Disponible en el resumen a nivel organizacional.
 | ------------------------- | ------------------------------------------------------------ |
 | <code>topic:<em>TOPIC-NAME</em></code> | Muestra los repositorios que se clasifican con *TOPIC-NAME*. |
 
-{% if security-overview-views %}
+{% ifversion security-overview-views %}
 
 ## Filtrar por gravedad
 
@@ -117,15 +117,15 @@ Disponible en las vistas de alertas del escaneo de código. Todas las alertas de
 | `severity:warning`  | Muestra alertas del {% data variables.product.prodname_code_scanning %} categorizadas como advertencias. |
 | `severity:note`     | Muestra alertas del {% data variables.product.prodname_code_scanning %} categorizadas como notas.        |
 
-{% if dependabot-alerts-vulnerable-calls %}
-## Filter by {% data variables.product.prodname_dependabot %} alert type
+{% ifversion dependabot-alerts-vulnerable-calls %}
+## Filtrar por tipo de alerta del {% data variables.product.prodname_dependabot %}
 
-Available in the {% data variables.product.prodname_dependabot %} alert views. You can filter the view to show {% data variables.product.prodname_dependabot_alerts %} that are ready to fix or where additional information about exposure is available. You can click any result to see full details of the alert.
+Disponible en las vistas de alerta del {% data variables.product.prodname_dependabot %}. Puedes filtrar la vista para mostrar las {% data variables.product.prodname_dependabot_alerts %} que están listas para arreglarse o donde la información adicional sobre la exposición se encuentre disponible. Puedes hacer clic en cualquier resultado para ver todos los detalles de esa alerta.
 
-| Qualifier              | Descripción                                                                                                                                                                                                                                                                                                                                                       |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `has:patch`            | Displays {% data variables.product.prodname_dependabot %} alerts for vulnerabilities where a secure version is already available.                                                                                                                                                                                                                                 |
-| `has:vulnerable-calls` | Displays {% data variables.product.prodname_dependabot %} alerts where at least one call from the repository to a vulnerable function is detected. For more information, see "[Viewing and updating Dependabot alerts](/code-security/dependabot/dependabot-alerts/viewing-and-updating-dependabot-alerts#about-the-detection-of-calls-to-vulnerable-functions)." |
+| Qualifier              | Descripción                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `has:patch`            | Muestra alertas del {% data variables.product.prodname_dependabot %} para vulnerabilidades en donde una versión segura ya esté disponible.                                                                                                                                                                                                                                                              |
+| `has:vulnerable-calls` | Muestra alertas del {% data variables.product.prodname_dependabot %} en donde se detecta por lo menos una llamada del repositorio a una función vulnerable. Para obtener más información, consulta la sección "[Ver y actualizar las alertas del Dependabot](/code-security/dependabot/dependabot-alerts/viewing-and-updating-dependabot-alerts#about-the-detection-of-calls-to-vulnerable-functions)". |
 {% endif %}
 
 {% endif %}
